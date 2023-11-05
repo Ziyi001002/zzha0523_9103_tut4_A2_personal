@@ -33,6 +33,7 @@ function setup() {
   PacmanInterval = setInterval(movePacman, 100);
 }
 
+let PacmanDirection = "right"; // Set initial direction to right
 
 function movePacman() {
   if (PacmanDirection === "right") {
