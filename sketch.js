@@ -26,6 +26,7 @@ let eyeWidth = 25;
 let eyeHeight = 25; 
 
 let PacmanInterval;
+let GhostInterval;
 
 function setup() {
   background(220);
@@ -52,6 +53,24 @@ function movePacman() {
     } else {
       // After reaching the boundary, change to the opposite direction
       PacmanDirection = "right";
+    }
+  }
+}
+
+function moveGhost() {
+  if (GhostDirection === "up") {
+    if (GhostYpos - 5 >= 0) {
+      GhostYpos -= 5; // kepp moving to up
+    } else {
+      // After reaching the boundary, change to the opposite direction
+      GhostDirection = "down";
+    }
+  } else if (GhostDirection === "down") {
+    if (GhostYpos + 5 < 600) {
+      GhostYpos += 5; // kepp moving to down
+    } else {
+      // After reaching the boundary, change to the opposite direction
+      GhostDirection = "up";
     }
   }
 }
