@@ -31,6 +31,8 @@ function setup() {
   background(220);
   // Start Pacman animation with a 100ms interval
   PacmanInterval = setInterval(movePacman, 100);
+  // Start Ghost animation with a 300ms interval
+  GhostInterval = setInterval(moveGhost, 300);
 }
 
 let PacmanDirection = "right"; // Set initial direction to right
